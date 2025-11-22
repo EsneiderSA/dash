@@ -39,7 +39,6 @@ print("--- Datos cargados y limpios ---")
 # 2. CONFIGURACIÓN DE LA APP DASH
 # ==============================================================================
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-server = app.server  # <--- AGREGA ESTA LÍNEA OBLIGATORIAMENTE
 app.title = "FICs Colombia Analytics"
 server = app.server # Necesario para despliegue en Render
 
@@ -233,3 +232,4 @@ def update_dashboard(tipo_fondo, entidad):
 # ==============================================================================
 if __name__ == '__main__':
     app.run(debug=True, port=8050)
+
